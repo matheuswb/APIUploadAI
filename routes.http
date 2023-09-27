@@ -23,3 +23,15 @@ Content-Type: application/json
 {
     "prompt": "boca, podcast"
 }
+
+###
+
+# @name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "1b310071-6c51-468d-b359-be1b04193eaf",
+    "temperature": 0.5,
+    "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}''' "
+}
