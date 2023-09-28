@@ -8,20 +8,20 @@ POST http://localhost:3333/videos
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="1.mp3"
+Content-Disposition: form-data; name="file"; filename="2.mp3"
 Content-Type: audio/mpeg
 
-< ./1.mp3
+< ./2.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ###
 
 # @name create-transcription
-POST http://localhost:3333/videos/06f66bdc-7414-4bab-b1b0-473db9e00ade/transcription
+POST http://localhost:3333/videos/0668aa41-a513-4982-9155-375c4b7f1a7a/transcription
 Content-Type: application/json
 
 {
-    "prompt": "boca, podcast"
+    "prompt": "filosofia, estoicismo, estoicos"
 }
 
 ###
@@ -31,7 +31,7 @@ POST http://localhost:3333/ai/complete
 Content-Type: application/json
 
 {
-    "videoId": "06f66bdc-7414-4bab-b1b0-473db9e00ade",
+    "videoId": "0668aa41-a513-4982-9155-375c4b7f1a7a",
     "temperature": 0.5,
     "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}''' "
 }
